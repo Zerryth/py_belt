@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'login/css/login_registration_style.css' %}">
+    <title>User Reviews (User Profile)</title>
+</head>
+<body>
+    <h1> User Alias: {{ request.session.alias}}</h1>
+    <p>name: </p>
+    <p>Email: {{ request.session.email }}</p>
+    <p>Total Reviews: NUMBER</p><br>
+
+    <p>Posted Reviews on the following books:</p>
+
+</body>
+</html>

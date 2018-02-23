@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Travel Dashboard</title>
+</head>
+<body>
+    <h1>Hello, {{ first_name }}</h1>
+    <a href="/logout">Logout</a>
+    
+    <p>Your Trip Schedules</p>
+    <div class="trips">
+        {% for tripdata in user_trips %}
+            <p>Destination: {{ tripdata.destination }}</p>
+            <p>Description: {{ tripdata.description }}</p>
+            <p>Travel Start Date: {{ tripdata.from_date }}</p>
+            <p>Travel End Date:{{ tripdata.to_date }}</p>
+            <p>Plan: </p>
+        {% endfor %}
+    </div>
+    <p>Other User's Travel Plans</p>
+        {% for plan in TravelPlan %}
+            <p>Name: </p>
+            <p>Destination: {{ plan.trip }}</p>
+            <p><a href="">Do you want to join?</a></p>
+        {% endfor %}
+    <a href="/travels/add">Add Travel Plan</a>
+</body>
+</html>
